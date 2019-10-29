@@ -8,11 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
 </head>
-
 <body>
     <header>
             <div class="container">
-                <h3 class="text-center mt-5">CURSO DE UDEMY DE LARAVEL</h3>
+                <h3 class="text-center mt-5">Aprendiendo laravel</h3>
             </div>
     </header>
 
@@ -20,5 +19,4 @@
     @yield('content')
 </div>
 </body>
-
 </html>

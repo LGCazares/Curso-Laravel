@@ -9,10 +9,9 @@
     <input name="ap_materno" type="text" placeholder="Apellido Materno">
     <input name="edad" type="number" placeholder="Edad">
     <input name="correo" type="email" placeholder="correo">
-
     <button type="button" class="btn btn-primary">Enviar</button>
-
 </form>
-
+<div>
+</div>
 
 @endsection

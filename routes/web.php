@@ -1,5 +1,5 @@
 <?php
 
-Route::get('/', function () {
-    return view('01.01');
-});
+Route::get('/', 'primerController@inicio')->name('/');
+
+
