@@ -1,15 +1,17 @@
-header{
-    
-        font-size: $fs-14;
-        line-height: $lh-12;
-        color: $pine-green;
-        font-weight: $fw-bold;
-        margin: 0;
-        align-self: center;
-        padding: 5px 0;
-        background-color: aqua;
-}
 
-.hola{
-    background-color: blue;
-}
+
+  header {
+    background-color: black;
+    height: 2em;
+ }
+
+ .btn-01 {
+     color:white;
+     border: none;
+     background-color: transparent;
+     font-size: 16px;
+     font-weight: 300;
+     padding: 10px 15px;
+     line-height: 25px;
+     text-decoration: none;
+ }

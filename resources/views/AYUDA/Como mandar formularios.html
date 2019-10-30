@@ -43,9 +43,9 @@ protected $fillable = ['Campos de la tabla'];
     use App\Modelos\Modelo que ocupamos;
 
 
-    public function -funcion- (Request $request) { //Funcion que hace la accion
-    $nuevo_usuario=PreRegistroUsuario::create($request->all()); //$variable = Modelo
-    return redirect()->route('/')->with('status','Usuario guardado con éxito.'); //Regresa a la Ruta //pone Status
+    public function -funcion- (Request $request) {                                           //Funcion que hace la accion
+    $nuevo_usuario=PreRegistroUsuario::create($request->all());                              //$variable = Modelo
+    return redirect()->route('/')->with('status','Usuario guardado con éxito.');             //Regresa a la Ruta //pone Status
     }
 
 
