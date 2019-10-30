@@ -6,14 +6,24 @@
 
 
 
-<h3 class="">Como Mandar formularios?</h3>
+<h3 class="">Manda este formulario!</h3>
 <form method="POST" class="" action="{{route('guarda')}}">
 @csrf
-    <input name="name" type="text" placeholder="Nombre" required>
-    <input name="ap_paterno" type="text" placeholder="Apellido Paterno" required>
-    <input name="ap_materno" type="text" placeholder="Apellido Materno" required>
-    <input name="edad" type="number" placeholder="Edad" required>
-    <input name="correo" type="email" placeholder="correo" required>
+    <input name="nombre" type="text" placeholder="Nombre" value="{{old('nombre')}}" required>
+    {!! $errors->first('nombre','<span class="">:message</span>') !!}     
+
+    <input name="ap_paterno" type="text" placeholder="Apellido Paterno" value="{{old('ap_paterno')}}" required>
+    {!! $errors->first('ap_paterno','<span class="">:message</span>') !!}     
+
+    <input name="ap_materno" type="text" placeholder="Apellido Materno"  value="{{old('ap_materno')}}" required>
+    {!! $errors->first('ap_materno','<span class="">:message</span>') !!}     
+
+    <input name="edad" type="number" placeholder="Edad"  value="{{old('edad')}}" required>
+    {!! $errors->first('edad','<span class="">:message</span>') !!}     
+
+    <input name="correo" type="email" placeholder="correo"  value="{{old('correo')}}" required>
+    {!! $errors->first('correo','<span class="">:message</span>') !!}     
+
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 <div>
