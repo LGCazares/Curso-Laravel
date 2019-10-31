@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Modelos\Usuario;
+use App\Usuario;
 
 
 class primerController extends Controller
@@ -12,14 +12,17 @@ class primerController extends Controller
     return view('01.formularios');
     }
 
-    public function muestra_vista () {
+    public function guarda () {
         return view('01.guarda_formulario');
-    }
+        }
 
-    public function guarda(){
-    $datos=Usuario::create(request()->all());
-    return view('01.guarda_formulario', compact('datos'));
-    }
+  
+
+    public function guardaUsuario (Request $request) {                                           //Funcion que hace la accion
+        $nuevo_usuario=Usuario::create($request->all());                              //$variable = Modelo
+        return redirect()->route('guarda/usuario')->with('status','Usuario guardado con éxito.');             //Regresa a la Ruta //pone Status
+        }
+    
 
 }
 
