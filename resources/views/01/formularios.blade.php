@@ -7,7 +7,7 @@
 
 
 <h3 class="">Manda este formulario!</h3>
-<form method="POST" class="" action="{{route('guarda/usuario')}}">
+<form method="POST" class="" action="{{route('guarda_formulario')}}">
 @csrf
     <input name="nombre" type="text" placeholder="Nombre" value="{{old('nombre')}}" required>
     {!! $errors->first('nombre','<span class="">:message</span>') !!}     

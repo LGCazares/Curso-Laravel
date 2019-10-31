@@ -1,11 +1,15 @@
 @extends('layouts.header')
 @section('content')
 
-
-<div class="form-group col-lg-8">
-		<label>Nombre</label>
+<div class="mt-5">
+	<div>
 		<input type="text" value="" readonly disabled>
-	</div>
+		<input type="text" value="" readonly disabled>
+		<input type="text" value="" readonly disabled>
+		<input type="number" value="" readonly disabled>
+		<input type="email" value="" readonly disabled>
 
+	</div>
+</div>
 
 @endsection

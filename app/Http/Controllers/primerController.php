@@ -8,21 +8,20 @@ use App\Usuario;
 class primerController extends Controller
 
 {
-    public function inicio () {
-    return view('01.formularios');
+    
+    public function mostrarFormulario () {
+        return view('01.formularios');
     }
 
-    public function guarda () {
-        return view('01.guarda_formulario');
-        }
+    public function guarda_formulario (Request $request) {                                           //Funcion que hace la accion
+        $nuevo_usuario=Usuario::create($request->all());
+        return redirect()->route('lista_usuarios')->with('status','Información guardada.');
+    }
 
-  
-
-    public function guardaUsuario (Request $request) {                                           //Funcion que hace la accion
-        $nuevo_usuario=Usuario::create($request->all());                              //$variable = Modelo
-        return redirect()->route('guarda/usuario')->with('status','Usuario guardado con éxito.');             //Regresa a la Ruta //pone Status
-        }
-    
+    public function mostrarUsuarios () {
+        $usuarios=Usuario::all();
+        return view ('01.lista', compact('usuarios'));
+    }
 
 }
 
