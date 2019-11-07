@@ -18,4 +18,7 @@ class phpController extends Controller
     public function arreglos_indexados () {
         return view('php.arreglos_indexados');
     }
+    public function print_r_var_dump () {
+        return view('php.print_r_var_dump');
+    }
 }
