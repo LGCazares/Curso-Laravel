@@ -34,4 +34,7 @@
         @endforeach
     </tbody>
 </table>
+<div class="ml-auto my-5 col-lg-3">
+        <a href="{{route('guarda_formulario')}}"  class="">Nuevo Usuario</a>
+    </div>
 @endsection

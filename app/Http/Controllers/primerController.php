@@ -13,7 +13,17 @@ class primerController extends Controller
         return view('01.formularios');
     }
 
-    public function guarda_formulario (Request $request) {                                           //Funcion que hace la accion
+    public function guarda_formulario (Request $request) {     
+        $validate = $request->validate([
+            'nombre' => 'required',
+            'ap_paterno' => 'required',
+            'ap_materno' => 'required',
+            'edad' => 'required',
+            'correo' => 'required|email|unique:usuarios',
+
+          ]);
+         
+                                      //Funcion que hace la accion
         $nuevo_usuario=Usuario::create($request->all());
         return redirect()->route('lista_usuarios')->with('status','Información guardada.');
     }
