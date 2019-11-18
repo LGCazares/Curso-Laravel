@@ -1,5 +1,3 @@
-
-
 @extends('layouts.header')
 @section('content')
 
@@ -26,5 +24,4 @@
             echo "Edad 2 es menor";
         }
 ?>
-
 @endsection
