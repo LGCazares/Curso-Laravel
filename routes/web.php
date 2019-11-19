@@ -1,5 +1,6 @@
 <?php
-
+//home
+Route::get('/', 'alumnoController@home')->name('/');
 //Alumnos
 Route::post('formulario_alumno', 'alumnoController@guarda_formulario')->name('guarda_formulario');
 Route::get('nuevo_alumno', 'alumnoController@mostrarFormulario')->name('nuevo_alumno');
@@ -8,10 +9,13 @@ Route::get('lista_alumnos', 'alumnoController@mostrarAlumnos')->name('lista_alum
 //Profesores
 Route::post('formulario_profesor', 'profeController@guarda_formulario')->name('guarda_formulario_profe');
 Route::get('nuevo_profesor', 'profeController@mostrarFormulario')->name('nuevo_profesor');
+Route::get('lista_profesores', 'profeController@mostrarProfesores')->name('lista_profesores');
+
 
 //materias
 Route::post('formulario_materias', 'materiaController@guarda_formulario')->name('guarda_formulario_materia');
 Route::get('nueva_materia', 'materiaController@mostrarFormulario')->name('nueva_materia');
+Route::get('lista_materias', 'materiaController@mostrarMaterias')->name('lista_materias');
 
 
 

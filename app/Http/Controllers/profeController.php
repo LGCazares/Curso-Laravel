@@ -21,6 +21,11 @@ class profeController extends Controller
           ]);
          
         $nuevo_profesor=profe::create($request->all());
-        return redirect()->route('nuevo_profesor')->with('status','Información guardada.');
+        return redirect()->route('lista_profesores')->with('status','Información guardada.');
+    }
+
+    public function mostrarProfesores () {
+        $profesores=Profe::all();
+        return view ('profesores.lista_profesores', compact('profesores'));
     }
 }

@@ -8,7 +8,12 @@ use App\Alumno;
 class alumnoController extends Controller
 
 {
-    
+    //home
+    public function home() {
+        return view('home.inicio');
+    }
+    //////////////////////////////////////////
+
     public function mostrarFormulario () {
         return view('alumnos.formulario_alumno');
     }

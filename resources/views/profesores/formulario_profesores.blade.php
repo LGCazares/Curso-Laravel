@@ -37,7 +37,7 @@
         </div>
         <div class="form-group col-lg-4">
             <label for="num_empleado">num_empleado :</label>
-            <input type="number" placeholder="2000360101" value="{{ old('num_empleado') }}" name="num_empleado">
+            <input type="number" placeholder="12345678" value="{{ old('num_empleado') }}" name="num_empleado">
             {!! $errors->first('num_empleado','<span class="error_form">:message</span>') !!}
         </div>
         <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
