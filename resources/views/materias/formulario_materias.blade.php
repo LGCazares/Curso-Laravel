@@ -37,6 +37,7 @@
         </div>
         <div class="form-group col-lg-4">
             <label for="profe_id">Profesor :</label>
+
             <select name="profe_id">
                 <option value="">Profesor</option>
                 @foreach ($profes as $profe)
