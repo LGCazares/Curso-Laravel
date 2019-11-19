@@ -35,13 +35,13 @@
             <input type="text" placeholder="Apellido paterno" value="{{ old('clave') }}" name="clave">
             {!! $errors->first('clave','<span class="error_form">:message</span>') !!}
         </div>
-        <div class="form-group col-lg-4">
+        <div class="form-group col-lg-6">
             <label for="profe_id">Profesor :</label>
 
             <select name="profe_id">
                 <option value="">Profesor</option>
                 @foreach ($profes as $profe)
-                <option value="{{ $profes['id'] }}">{{ $profes->nombre }}</option>
+                <option value="{{ $profe->id }}">{{$profe->nombre }} {{$profe->ap_paterno }} {{$profe->ap_materno }}</option>
                 @endforeach
             </select>
             {!! $errors->first('profe_id','<span class="error_form">:message</span>') !!}

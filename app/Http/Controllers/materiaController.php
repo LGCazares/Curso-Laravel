@@ -10,7 +10,8 @@ class materiaController extends Controller
 {
     public function mostrarFormulario () {
         $profes = Profe::all();
-        return view('materias.formulario_materias')->with('profes',$profes);
+        //return $profes;
+        return view('materias.formulario_materias', compact('profes'));
     }
 
     public function guarda_formulario (Request $request) {
