@@ -14,7 +14,7 @@
             <h2 class="fs-22 fw-bold pine-green">Registro de Profesores</h2>
         </div>
     </div>
-    <form method="POST" class="row" action="{{route('guarda_formulario_profe')}}">
+    <form method="" class="row">
         @csrf
         <div class="form-group col-lg-4">
             <label for="nombre">Nombre:</label>
