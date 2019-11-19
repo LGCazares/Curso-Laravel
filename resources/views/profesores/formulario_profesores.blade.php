@@ -7,14 +7,18 @@
         color: red;
     }
 </style>
-
+@if (session('status'))
+<div class="alert alert-success" role="alert">
+    {{ session('status') }}
+</div>
+@endif
 <div class="container">
     <div class="row justify-content-center my-5">
         <div class="col-lg-6 text-center">
             <h2 class="fs-22 fw-bold pine-green">Registro de Profesores</h2>
         </div>
     </div>
-    <form method="" class="row">
+    <form method="post" class="row" action="{{route('guarda_formulario_profe')}}">
         @csrf
         <div class="form-group col-lg-4">
             <label for="nombre">Nombre:</label>

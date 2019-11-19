@@ -6,7 +6,7 @@
     {{ session('status') }}
 </div>
 @endif
-<h3 class="">Lista de Akumnos</h3>
+<h3 class="">Lista de Alumnos</h3>
 
 
 <table class="table table-striped table-dark">
@@ -23,7 +23,7 @@
     <tbody>
         @foreach ($alumnos as $alumno)
         <tr>
-            <td></td>
+            <td>-</td>
             <td>{{ $alumno->nombre }}</td>
             <td>{{ $alumno->ap_paterno }}</td>
             <td>{{ $alumno->ap_materno }}</td>

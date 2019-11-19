@@ -9,6 +9,9 @@ Route::get('lista_alumnos', 'alumnoController@mostrarAlumnos')->name('lista_alum
 Route::post('formulario_profesor', 'profeController@guarda_formulario')->name('guarda_formulario_profe');
 Route::get('nuevo_profesor', 'profeController@mostrarFormulario')->name('nuevo_profesor');
 
+//materias
+Route::post('formulario_materias', 'materiaController@guarda_formulario')->name('guarda_formulario_materia');
+Route::get('nueva_materia', 'materiaController@mostrarFormulario')->name('nueva_materia');
 
 
 
