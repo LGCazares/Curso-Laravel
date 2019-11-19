@@ -11,11 +11,6 @@ class materiaController extends Controller
         return view('materias.formulario_materias');
     }
 
-
-
-
-
-    
     public function guarda_formulario (Request $request) {     
         $validate = $request->validate([
             'materia' => 'required',

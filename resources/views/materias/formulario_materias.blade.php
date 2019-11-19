@@ -39,7 +39,9 @@
             <label for="profe_id">Profesor :</label>
             <select name="profe_id">
                 <option value="">Profesor</option>
-                <option value="1">1</option>
+                @foreach ($profes as $profe)
+                <option value="{{ $profes['id'] }}">{{ $profes->nombre }}</option>
+                @endforeach
             </select>
             {!! $errors->first('profe_id','<span class="error_form">:message</span>') !!}
         </div>
