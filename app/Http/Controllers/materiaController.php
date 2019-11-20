@@ -26,9 +26,7 @@ class materiaController extends Controller
         return redirect()->route('lista_materias')->with('status','Información guardada.');
     }
     public function mostrarMaterias () {
-        $profes = Profe::all();
         $materias=Materia::all();
-return $materias;
-        return view ('materias.lista_materias', compact('materias','profes'));
+        return view ('materias.lista_materias', compact('materias'));
     }
 }

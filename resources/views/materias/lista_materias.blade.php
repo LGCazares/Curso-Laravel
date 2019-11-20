@@ -27,7 +27,7 @@
             <td>{{ $materia->materia }}</td>
             <td>{{ $materia->creditos }}</td>
             <td>{{ $materia->clave }}</td>
-            <td>{{ $materia->profe_id }}</td>
+            <td>{{ $materia->profe->nombre }} {{ $materia->profe->ap_paterno }}</td>
         </tr>
         @endforeach
     </tbody>

@@ -11,8 +11,10 @@ class Materia extends Model
     protected $fillable = ['materia','creditos','clave','profe_id'];
 
 
-    public function profesor()
+    public function profe()
     {
-        return $this->hasOne('App\Profe');
+        return $this->belongsTo('App\Profe');
     }
 }
+
+
