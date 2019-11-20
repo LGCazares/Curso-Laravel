@@ -28,11 +28,15 @@
             <td>{{ $alumno->ap_paterno }}</td>
             <td>{{ $alumno->ap_materno }}</td>
             <td>{{ $alumno->matricula }}</td>
+            <td><a href="{{route('alumno/detalle)}}">Detalle</a></td>
+            <td><a href="{{route('alumno/detalle',$alumno->id)}}">Eliminar</a></td>
+
         </tr>
         @endforeach
     </tbody>
 </table>
 <div class="ml-auto my-5 col-lg-3">
-        <a href="{{route('nuevo_alumno')}}"  class="">Nuevo Alumno</a>
+        <a href="{{route('nuevo_alumno')}}"  class="">Nuevo Alumno</a> <br>
+        <a href="{{route('/')}}"  class="">REGISTRO</a>
     </div>
 @endsection

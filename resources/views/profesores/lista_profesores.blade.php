@@ -33,6 +33,8 @@
     </tbody>
 </table>
 <div class="ml-auto my-5 col-lg-3">
-        <a href="{{route('nuevo_profesor')}}"  class="">Nuevo Profesor</a>
+        <a href="{{route('nuevo_profesor')}}"  class="">Nuevo Profesor</a> <br>
+        <a href="{{route('/')}}"  class="">REGISTRO</a>
+
     </div>
 @endsection

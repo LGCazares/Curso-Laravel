@@ -8,7 +8,6 @@
 @endif
 <h3 class="">Lista de Alumnos</h3>
 
-
 <table class="table table-striped table-dark">
 
     <thead>
@@ -33,6 +32,7 @@
     </tbody>
 </table>
 <div class="ml-auto my-5 col-lg-3">
-        <a href="{{route('nueva_materia')}}"  class="">Nuevo Alumno</a>
+        <a class=""  href="{{route('nueva_materia')}}"  class="">Nueva Materia</a> <br>
+        <a class=""  href="{{route('/')}}"  class="">REGISTRO</a>
     </div>
 @endsection

@@ -24,7 +24,6 @@ class alumnoController extends Controller
             'ap_paterno' => 'required',
             'ap_materno' => 'required',
             'matricula' => 'required|unique:alumnos',
-
           ]);
          
         $nuevo_alumno=Alumno::create($request->all());
@@ -34,6 +33,12 @@ class alumnoController extends Controller
     public function mostrarAlumnos () {
         $alumnos=Alumno::all();
         return view ('alumnos.lista_alumnos', compact('alumnos'));
+    }
+
+    public function detalleAlumno ($id) {
+        $alumno=Alumno::where('id', $id)->first();
+        return view('alumnos.detalle_alumno', compact('alumno'));
+
     }
 
 }

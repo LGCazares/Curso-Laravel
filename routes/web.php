@@ -5,6 +5,8 @@ Route::get('/', 'alumnoController@home')->name('/');
 Route::post('formulario_alumno', 'alumnoController@guarda_formulario')->name('guarda_formulario');
 Route::get('nuevo_alumno', 'alumnoController@mostrarFormulario')->name('nuevo_alumno');
 Route::get('lista_alumnos', 'alumnoController@mostrarAlumnos')->name('lista_alumnos');
+Route::get('alumno/detalle/{id}', [ 'as' => 'alumno/detalle', 'uses' => 'alumnoController@detalleAlumno']);
+
 
 //Profesores
 Route::post('formulario_profesor', 'profeController@guarda_formulario')->name('guarda_formulario_profe');
