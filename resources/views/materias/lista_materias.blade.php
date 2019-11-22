@@ -8,7 +8,7 @@
 @endif
 <h3 class="">Lista de Alumnos</h3>
 
-<table class="table table-striped table-dark">
+<table class="table table-striped">
 
     <thead>
         <tr>

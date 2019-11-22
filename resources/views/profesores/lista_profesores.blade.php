@@ -9,7 +9,7 @@
 <h3 class="">Lista de Profesores</h3>
 
 
-<table class="table table-striped table-dark">
+<table class="table table-striped">
 
     <thead>
         <tr>
@@ -32,9 +32,8 @@
         @endforeach
     </tbody>
 </table>
-<div class="ml-auto my-5 col-lg-3">
-        <a href="{{route('nuevo_profesor')}}"  class="">Nuevo Profesor</a> <br>
-        <a href="{{route('/')}}"  class="">REGISTRO</a>
-
-    </div>
+<div class="ml-auto my-5 col-lg-4">
+    <a href="{{route('nuevo_profesor')}}" class="btn-01">Nuevo Profesor</a>
+    <a href="{{route('/')}}" class="btn-01">REGISTRO</a>
+</div>
 @endsection

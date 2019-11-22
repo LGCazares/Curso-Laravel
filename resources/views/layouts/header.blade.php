@@ -6,35 +6,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <style>
-        header {
-           background-color: black;
-           height: 2em;
-        }
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        .btn-01 {
-            color:white;
-            border: none;
-            background-color: transparent;
-            font-size: 16px;
-            font-weight: 300;
-            padding: 10px 15px;
-            line-height: 25px;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <div class="row mt-2 container my-3">
-            <div class="ml-auto">
-            <a href="https://getbootstrap.com/" target="_blank" class="btn-01">Bootstrap</a>
-            <a href="https://laravel.com/" target="_blank" class="btn-01">Laravel</a>
-            <a href="https://www.w3schools.com/" target="_blank" class="btn-01">w3schools.com</a>
+        <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">MENU</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('/')}}">INICIO<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            REGISTRO
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('nuevo_alumno')}}">ALUMNO</a>
+                            <a class="dropdown-item" href="{{route('nuevo_profesor')}}">PROFESOR</a>
+                            <a class="dropdown-item" href="{{route('nueva_materia')}}">MATERIA</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            LISTAS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('lista_alumnos')}}">ALUMNO</a>
+                            <a class="dropdown-item" href="{{route('lista_profesores')}}">PROFESOR</a>
+                            <a class="dropdown-item" href="{{route('lista_materias')}}">MATERIA</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
 
     <div class="container mt-5">

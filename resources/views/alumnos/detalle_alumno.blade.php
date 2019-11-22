@@ -7,29 +7,30 @@
             <h2 class="fs-22 fw-bold pine-green">Detalle del Alumno</h2>
         </div>
     </div>
-    <div class="form-group col-lg-4">
+</div>
+<div class="row">
+    <div class="form-group col-lg-3">
         <label for="nombre">Nombre(s):</label>
         <input type="text" value="{{ $alumno->nombre }}" readonly disabled>
     </div>
-    <div class="form-group col-lg-4">
+    <div class="form-group col-lg-3">
         <label for="ap_paterno">Apellido paterno:</label>
         <input type="text" value="{{ $alumno->ap_paterno }}" readonly disabled>
     </div>
-    <div class="form-group col-lg-4">
+    <div class="form-group col-lg-3">
         <label for="ap_materno">Apellido materno:</label>
         <input type="text" value="{{ $alumno->ap_materno }}" readonly disabled>
 
     </div>
-    <div class="form-group col-lg-4">
+    <div class="form-group col-lg-3">
         <label for="matricula">Matricula :</label>
         <input type="text" value="{{ $alumno->matricula }}" readonly disabled>
     </div>
-    <div class="">
-    <a href="" class="">Editar</a>
-    </div>
-    <div class="">
-        <a href="{{route('lista_alumnos')}}" class="">Regresar</a>
-    </div>
+
+</div>
+<div class="">
+    <a href="" class="">Editar</a>  <br>
+    <a href="{{route('lista_alumnos')}}" class="">Regresar</a>
 </div>
 
 @endsection
