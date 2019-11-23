@@ -6,7 +6,13 @@
     {{ session('status') }}
 </div>
 @endif
-<h3 class="">Lista de Alumnos</h3>
+<style>
+.detalle {
+    width: 1.5em;
+    height: 1.5em;
+}
+</style>
+<h3 class="">Lista de Materias</h3>
 
 <table class="table table-striped">
 
@@ -27,12 +33,35 @@
             <td>{{ $materia->creditos }}</td>
             <td>{{ $materia->clave }}</td>
             <td>{{ $materia->profe->nombre }} {{ $materia->profe->ap_paterno }}</td>
+            <td><a href=""><img class="detalle" src="images/ojo.png" alt=""></a></td>
+            <td><a href="" class="btn-x" data-toggle="modal" data-target="#Eliminar"><img class="detalle" src="images/equis.png" alt=""></a></td>
         </tr>
+
         @endforeach
     </tbody>
 </table>
-<div class="ml-auto my-5 col-lg-3">
-        <a class=""  href="{{route('nueva_materia')}}"  class="">Nueva Materia</a> <br>
-        <a class=""  href="{{route('/')}}"  class="">REGISTRO</a>
+
+<!-- Modal -->
+<div class="modal fade" id="Eliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Deceas borar a este profesor?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+            <h5>No hay marcha atras y los datos se perderan</h5>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Borrar</button>
+      </div>
     </div>
+  </div>
+</div>
+
 @endsection

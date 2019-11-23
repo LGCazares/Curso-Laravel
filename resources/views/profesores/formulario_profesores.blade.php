@@ -36,7 +36,7 @@
             {!! $errors->first('ap_materno','<span class="error_form">:message</span>') !!}
         </div>
         <div class="form-group col-lg-3">
-            <label for="num_empleado">num_empleado :</label>
+            <label for="num_empleado">Numero de empleado :</label>
             <input class="form-control" type="number" placeholder="12345678" value="{{ old('num_empleado') }}" name="num_empleado">
             {!! $errors->first('num_empleado','<span class="error_form">:message</span>') !!}
         </div>

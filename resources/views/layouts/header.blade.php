@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+    <header class="mt-5">
+        <nav  style="background-color:#2381AB ;" class="container navbar navbar-expand-lg navbar-light ">
             <a class="navbar-brand">MENU</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,10 +29,9 @@
                             REGISTRO
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('nuevo_alumno')}}">ALUMNO</a>
-                            <a class="dropdown-item" href="{{route('nuevo_profesor')}}">PROFESOR</a>
-                            <a class="dropdown-item" href="{{route('nueva_materia')}}">MATERIA</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="btn-01 dropdown-item" href="{{route('nuevo_alumno')}}">ALUMNO</a>
+                            <a class="btn-01 dropdown-item" href="{{route('nuevo_profesor')}}">PROFESOR</a>
+                            <a class="btn-01 dropdown-item" href="{{route('nueva_materia')}}">MATERIA</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -40,10 +39,9 @@
                             LISTAS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('lista_alumnos')}}">ALUMNO</a>
-                            <a class="dropdown-item" href="{{route('lista_profesores')}}">PROFESOR</a>
-                            <a class="dropdown-item" href="{{route('lista_materias')}}">MATERIA</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="btn-01 dropdown-item" href="{{route('lista_alumnos')}}">ALUMNO</a>
+                            <a class="btn-01 dropdown-item" href="{{route('lista_profesores')}}">PROFESOR</a>
+                            <a class="btn-01 dropdown-item" href="{{route('lista_materias')}}">MATERIA</a>
                         </div>
                     </li>
                 </ul>
