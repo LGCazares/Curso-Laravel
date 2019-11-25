@@ -23,9 +23,8 @@ class alumnoController extends Controller
             'nombre' => 'required',
             'ap_paterno' => 'required',
             'ap_materno' => 'required',
-            'matricula' => 'required|unique:alumnos',
+            'matricula' => 'required|unique:alumnos|string|size:8',
           ]);
-         
         $nuevo_alumno=Alumno::create($request->all());
         return redirect()->route('lista_alumnos')->with('status','Información guardada.');
     }
@@ -40,7 +39,27 @@ class alumnoController extends Controller
         return view('alumnos.detalle_alumno', compact('alumno'));
 
     }
+    public function editAlumno ($id) {
+        $alumno=Alumno::where('id', $id)->first();
+        return view('alumnos.edit_alumno', compact('alumno'));
+    }
+
+    public function updateAlumno (Request $request){
+        $validate = $request->validate([
+            'nombre' => 'required',
+            'ap_paterno' => 'required',
+            'ap_materno' => 'required',
+           'matricula' => 'required|string|size:8',
+          ]);
+        $alumno=Alumno::find($request->id);
+          $alumno->update($request->all());
+          return redirect()->route('lista_alumnos')->with('status','Información actualizada.');
+    }
+
+
+    public function deleteAlumno ($id) {
+        Alumno::destroy($id);
+        return redirect()->route('lista_alumnos')->with('status','Alumno borrado');
+    }
 
 }
-
-

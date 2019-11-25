@@ -6,6 +6,10 @@ Route::post('formulario_alumno', 'alumnoController@guarda_formulario')->name('gu
 Route::get('nuevo_alumno', 'alumnoController@mostrarFormulario')->name('nuevo_alumno');
 Route::get('lista_alumnos', 'alumnoController@mostrarAlumnos')->name('lista_alumnos');
 Route::get('alumno/detalle/{id}', [ 'as' => 'alumno/detalle', 'uses' => 'alumnoController@detalleAlumno']);
+Route::get('editar/alumno/{id}', [ 'as' => 'editar/alumno', 'uses' => 'alumnoController@editAlumno']);
+Route::patch('editar/alumno/{id}', [ 'as' => 'editar/alumno', 'uses' => 'alumnoController@updateAlumno']);
+//elimina registro 
+Route::get('elimina/alumno/{id}', 'alumnoController@deleteAlumno')->name('elimina/alumno');
 
 
 //Profesores

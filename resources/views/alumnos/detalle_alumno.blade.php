@@ -26,11 +26,10 @@
         <label for="matricula">Matricula :</label>
         <input type="text" value="{{ $alumno->matricula }}" readonly disabled>
     </div>
-
 </div>
-<div class="">
-    <a href="" class="">Editar</a>  <br>
-    <a href="{{route('lista_alumnos')}}" class="">Regresar</a>
+<div class="row col-lg-6">
+    <a  href="{{route('editar/alumno',$alumno->id)}}" class="btn-01">Editar</a>  <br>
+    <a href="{{route('lista_alumnos')}}" class="btn-01">Regresar</a>
 </div>
 
 @endsection
