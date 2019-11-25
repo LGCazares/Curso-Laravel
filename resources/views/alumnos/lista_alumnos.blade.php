@@ -6,12 +6,7 @@
     {{ session('status') }}
 </div>
 @endif
-<style>
-    .detalle {
-        width: 1.5em;
-        height: 1.5em;
-    }
-</style>
+
 <h3 class="">Lista de Alumnos</h3>
 
 <table class="table table-striped">

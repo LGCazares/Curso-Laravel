@@ -1,13 +1,6 @@
 @extends('layouts.header')
 @section('content')
 
-<style>
-    .error_form {
-        font-size: 0.625rem;
-        color: red;
-    }
-</style>
-
 <div class="container">
     <div class="row justify-content-center my-5">
         <div class="col-lg-6 text-center">
@@ -31,18 +24,12 @@
             <input class="form-control" type="text" placeholder="Apellido materno" value="{{old('ap_materno',$alumno->ap_materno)}}" name="ap_materno">
             {!! $errors->first('ap_materno','<span class="error_form">:message</span>') !!}
         </div>
-        <div class="form-group col-lg-4">
-            <label for="matricula">Matricula :</label>
-            <input class="form-control" type="number" placeholder="2000360101" value="{{old('matricula',$alumno->matricula)}}" name="matricula" {{ $alumno->ap_materno }}>
-            {!! $errors->first('matricula','<span class="error_form">:message</span>') !!}
-        </div>
 </div>
 <div class="d-flex justify-content-end">
     <button type="submit" class="btn-01 col-lg-4">Actualizar</button>
 </div>
 </form>
 <div>
-</div>
 </div>
 
 @endsection

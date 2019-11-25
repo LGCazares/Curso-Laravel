@@ -9,4 +9,10 @@ class Alumno extends Model
     protected $table = 'alumnos';
     protected $primaryKey = 'id';
     protected $fillable = ['nombre','ap_paterno','ap_materno','matricula'];
+
+    public function materia()
+    {
+        return $this->hasMany('App\Materia');
+    }
+
 }

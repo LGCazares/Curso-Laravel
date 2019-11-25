@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Alumno;
+use App\Materia;
 
 
 class alumnoController extends Controller
@@ -15,7 +16,9 @@ class alumnoController extends Controller
     //////////////////////////////////////////
 
     public function mostrarFormulario () {
-        return view('alumnos.formulario_alumno');
+        $materias=Materia::all();
+
+        return view('alumnos.formulario_alumno', compact('materias'));
     }
 
     public function guarda_formulario (Request $request) {     
@@ -49,7 +52,6 @@ class alumnoController extends Controller
             'nombre' => 'required',
             'ap_paterno' => 'required',
             'ap_materno' => 'required',
-           'matricula' => 'required|string|size:8',
           ]);
         $alumno=Alumno::find($request->id);
           $alumno->update($request->all());

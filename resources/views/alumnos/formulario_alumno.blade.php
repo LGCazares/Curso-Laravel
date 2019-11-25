@@ -38,7 +38,16 @@
         </div>
         <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
     </form>
-    <div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="materia">
+        <label class="custom-control-label" for="materia"> </label>
+    </div>
+    <div class="form-group col-lg-5">
+        <label for="materia_id">Materias:</label> <br>
+        @foreach ($materias as $materia)
+        <input type="checkbox" class="" id="materia_{{$materia->id}}">
+        <label for="materia_{{$materia->id}}">{{$materia->materia }}</label>
+        @endforeach
     </div>
 </div>
 
