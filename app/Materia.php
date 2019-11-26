@@ -16,10 +16,6 @@ class Materia extends Model
         return $this->belongsTo('App\Profe');
     }
 
-    public function alumno()
-    {
-        return $this->belongsTo('App\Alumno');
-    }
 }
 
 

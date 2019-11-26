@@ -1,20 +1,13 @@
 @extends('layouts.header')
 @section('content')
 
-<style>
-    .error_form {
-        font-size: 0.625rem;
-        color: red;
-    }
-</style>
-
 <div class="container">
     <div class="row justify-content-center my-5">
         <div class="col-lg-6 text-center">
             <h2 class="fs-22 fw-bold pine-green">Registro de Alumno</h2>
         </div>
     </div>
-    <form method="POST" class="row" action="{{route('guarda_formulario')}}">
+    <form method="POST" class="form row" action="{{route('guarda_formulario')}}">
         @csrf
         <div class="form-group col-lg-4">
             <label for="nombre">Nombre:</label>
@@ -36,19 +29,22 @@
             <input class="form-control" type="number" placeholder="2000360101" value="{{ old('matricula') }}" name="matricula">
             {!! $errors->first('matricula','<span class="error_form">:message</span>') !!}
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
-    </form>
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="materia">
-        <label class="custom-control-label" for="materia"> </label>
-    </div>
-    <div class="form-group col-lg-5">
-        <label for="materia_id">Materias:</label> <br>
+</div>
+<div class="container row justify-content-center">
+    <div class="form-group col-lg-5 inputGroup">
+        <h2 class="text-center">Materias</h2>
         @foreach ($materias as $materia)
-        <input type="checkbox" class="" id="materia_{{$materia->id}}">
-        <label for="materia_{{$materia->id}}">{{$materia->materia }}</label>
+        <ul>
+            <input type="checkbox" id="materia_{{$materia->id}}">
+            <label for="materia_{{$materia->id}}">{{$materia->materia }}</label>
+        </ul>
         @endforeach
     </div>
+</div>
+<div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block mb-5">Enviar</button>
+</div>
+</form>
 </div>
 
 @endsection

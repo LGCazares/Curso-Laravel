@@ -10,4 +10,15 @@ class AlumnoMateria extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['alumno_id','materia_id'];
 
+
+    public function materia()
+    {
+        return $this->hasMany('App\Materia');
+    }
+
+    public function alumno()
+    {
+        return $this->belongsTo('App\Alumno');
+    }
+
 }

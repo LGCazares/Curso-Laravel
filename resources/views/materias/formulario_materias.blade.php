@@ -1,12 +1,6 @@
 @extends('layouts.header')
 @section('content')
 
-<style>
-    .error_form {
-        font-size: 0.625rem;
-        color: red;
-    }
-</style>
 @if (session('status'))
 <div class="alert alert-success" role="alert">
     {{ session('status') }}
