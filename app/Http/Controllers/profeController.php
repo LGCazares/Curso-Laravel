@@ -27,4 +27,30 @@ class profeController extends Controller
         $profesores=Profe::all();
         return view ('profesores.lista_profesores', compact('profesores'));
     }
+
+    public function detalleProfe ($id){
+        $profe=Profe::where('id', $id)->first();
+        return view('profesores.detalle_profe', compact('profe'));
+    }
+
+    public function editProfe ($id){
+        $profe=Profe::where('id', $id)->first();
+        return view('profesores.edit_profe', compact('profe'));
+    }
+
+    public function updateProfe (Request $request){
+        $validate = $request->validate([
+            'nombre' => 'required',
+            'ap_paterno' => 'required',
+            'ap_materno' => 'required',
+          ]);
+        $profe=Profe::find($request->id);
+          $profe->update($request->all());
+          return redirect()->route('lista_profesores')->with('status','Información actualizada.');
+    }
+
+    public function deleteProfe ($id){
+       Profe::destroy($id);
+       return redirect()->route('lista_profesores')->with('status','Profesor borrado');
+    }
 }

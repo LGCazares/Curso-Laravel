@@ -12,32 +12,29 @@
             <h2 class="fs-22 fw-bold pine-green">Registro de Profesores</h2>
         </div>
     </div>
-    <form method="post" class="row" action="{{route('guarda_formulario_profe')}}">
-        @csrf
+    <form method="post" class="row">
+        @csrf @method('PATCH')
         <div class="form-group col-lg-3">
             <label for="nombre">Nombre:</label>
-            <input class="form-control" type="text" placeholder="Nombre" value="{{ old('nombre') }}" name="nombre">
+            <input class="form-control" type="text" placeholder="Nombre" value="{{ old('nombre', $profe->nombre) }}" name="nombre">
             {!! $errors->first('nombre','<span class="error_form">:message <br></span>') !!}
         </div>
         <div class="form-group col-lg-3">
             <label for="ap_paterno">Apellido paterno:</label>
-            <input class="form-control" type="text" placeholder="Apellido paterno" value="{{ old('ap_paterno') }}" name="ap_paterno">
+            <input class="form-control" type="text" placeholder="Apellido paterno" value="{{ old('ap_paterno', $profe->ap_paterno) }}" name="ap_paterno">
             {!! $errors->first('ap_paterno','<span class="error_form">:message</span>') !!}
         </div>
         <div class="form-group col-lg-3">
             <label for="ap_materno">Apellido materno:</label>
-            <input class="form-control" type="text" placeholder="Apellido materno" value="{{ old('ap_materno') }}" name="ap_materno">
+            <input class="form-control" type="text" placeholder="Apellido materno" value="{{ old('ap_materno',$profe->ap_materno) }}" name="ap_materno">
             {!! $errors->first('ap_materno','<span class="error_form">:message</span>') !!}
         </div>
-        <div class="form-group col-lg-3">
-            <label for="num_empleado">Numero de empleado :</label>
-            <input class="form-control" type="number" placeholder="12345678" value="{{ old('num_empleado') }}" name="num_empleado">
-            {!! $errors->first('num_empleado','<span class="error_form">:message</span>') !!}
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
-    </form>
-    <div>
-    </div>
+</div>
+<div class="d-flex justify-content-end">
+<button type="submit" class="btn btn-primary btn-lg btn-block">Actualizar</button>
+</div>
+</form>
+</div>
 </div>
 
 @endsection

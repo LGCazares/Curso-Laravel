@@ -17,7 +17,6 @@ class alumnoController extends Controller
 
     public function mostrarFormulario () {
         $materias=Materia::all();
-
         return view('alumnos.formulario_alumno', compact('materias'));
     }
 
@@ -63,5 +62,6 @@ class alumnoController extends Controller
         Alumno::destroy($id);
         return redirect()->route('lista_alumnos')->with('status','Alumno borrado');
     }
+
 
 }

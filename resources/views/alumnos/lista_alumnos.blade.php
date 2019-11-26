@@ -28,7 +28,7 @@
             <td>{{ $alumno->ap_paterno }}</td>
             <td>{{ $alumno->ap_materno }}</td>
             <td>{{ $alumno->matricula }}</td>
-            <td><a href="{{route('alumno/detalle', $alumno->id)}}"><img class="detalle" src="images/ojo.png" alt=""></a></td>
+            <td><a href="{{route('detalle/alumno', $alumno->id)}}"><img class="detalle" src="images/ojo.png" alt=""></a></td>
             <td><a href="{{route('elimina/alumno', $alumno->id)}}" class="btn-x"><img class="detalle" src="images/equis.png" alt=""></a></td>
         </tr>
         @endforeach

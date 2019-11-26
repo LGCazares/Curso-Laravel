@@ -7,11 +7,6 @@
 </div>
 @endif
 <div class="container">
-
-
-
         <h1 class="">REGISTROS</h1>
 </div>
-
-
 @endsection
