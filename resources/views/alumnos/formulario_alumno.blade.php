@@ -30,13 +30,15 @@
             {!! $errors->first('matricula','<span class="error_form">:message</span>') !!}
         </div>
 </div>
-<div class="container row justify-content-center">
+<div class="mb-3 row justify-content-center">
     <div class="form-group col-lg-5 inputGroup">
         <h2 class="text-center">Materias</h2>
         @foreach ($materias as $materia)
-        <ul>
-            <input type="checkbox" id="materia_{{$materia->id}}">
-            <label for="materia_{{$materia->id}}">{{$materia->materia }}</label>
+        <ul class="ml-5 lista">
+            <li>
+                <input type="checkbox" id="materia_{{$materia->id}}">
+                <label for="materia_{{$materia->id}}">{{$materia->materia }}</label>
+            </li>
         </ul>
         @endforeach
     </div>
@@ -46,5 +48,4 @@
 </div>
 </form>
 </div>
-
 @endsection

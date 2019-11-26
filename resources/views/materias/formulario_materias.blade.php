@@ -19,7 +19,7 @@
             <input class="form-control" type="text" placeholder="Matematicas" value="{{ old('materia') }}" name="materia">
             {!! $errors->first('materia','<span class="error_form">:message <br></span>') !!}
         </div>
-        <div class="form-group col-lg-3">
+        <div class="form-group col-lg-1">
             <label for="creditos">Creditos:</label>
             <input class="form-control" type="number" placeholder="00" value="{{ old('creditos') }}" name="creditos">
             {!! $errors->first('creditos','<span class="error_form">:message</span>') !!}
@@ -29,7 +29,7 @@
             <input class="form-control" type="number" placeholder="0000" value="{{ old('clave') }}" name="clave">
             {!! $errors->first('clave','<span class="error_form">:message</span>') !!}
         </div>
-        <div class="form-group col-lg-5">
+        <div class="form-group col-lg-6">
             <label for="profe_id">Profesor:</label>
             <select class="form-control" name="profe_id">
                 <option value="">Profesor</option>

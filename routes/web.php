@@ -25,6 +25,8 @@ Route::get('elimina/profesor/{id}', 'profeController@deleteProfe')->name('elimin
 Route::post('formulario_materias', 'materiaController@guarda_formulario')->name('guarda_formulario_materia');
 Route::get('nueva_materia', 'materiaController@mostrarFormulario')->name('nueva_materia');
 Route::get('lista_materias', 'materiaController@mostrarMaterias')->name('lista_materias');
+Route::get('detalle/materia/{id}', [ 'as' => 'detalle/materia', 'uses' => 'materiaController@detalleMateria']);
+Route::get('editar/materia/{id}', [ 'as' => 'editar/materia', 'uses' => 'materiaController@editMateria']);
 
 
 

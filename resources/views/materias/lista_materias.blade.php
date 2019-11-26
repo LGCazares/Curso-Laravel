@@ -33,7 +33,7 @@
             <td>{{ $materia->creditos }}</td>
             <td>{{ $materia->clave }}</td>
             <td>{{ $materia->profe->nombre }} {{ $materia->profe->ap_paterno }}</td>
-            <td><a href=""><img class="detalle" src="images/ojo.png" alt=""></a></td>
+            <td><a href="{{route('detalle/materia', $materia->id)}}"><img class="detalle" src="images/ojo.png" alt=""></a></td>
             <td><a href="" class="btn-x" data-toggle="modal" data-target="#Eliminar"><img class="detalle" src="images/equis.png" alt=""></a></td>
         </tr>
 

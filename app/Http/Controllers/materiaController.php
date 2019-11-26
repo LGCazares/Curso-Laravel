@@ -28,4 +28,17 @@ class materiaController extends Controller
         $materias=Materia::all();
         return view ('materias.lista_materias', compact('materias'));
     }
+
+    public function detalleMateria ($id){
+        $materia=Materia::where('id',$id)->first();
+        return view('materias.detalle_materia', compact('materia'));
+        
+    }
+
+    public function editMateria ($id){
+        $materia=Materia::where('id',$id)->first();
+        $profes = Profe::all();
+        return view('materias.edit_materia', compact('materia','profes'));
+        
+    }
 }

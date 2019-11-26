@@ -1,22 +1,25 @@
 .btn-01{
     background-color: white; 
     color: black; 
-    border: 2px solid #008CBA;
+    border: 2px solid #22A1CD;
 
 }
 .btn-01:hover {
-    background-color: #008CBA;
+    background-color: #22A1CD;
     color: white;
 }
 .btn-x{
     background-color:transparent; 
     color: transparent; 
 }
+body{
+    background-color:#DEECE1;
+}
 //checkbox
 .inputGroup {
     background-color: #fff;
     display: block;
-    margin: 10px 0;
+    margin: 5px 5px;
     position: relative;
 
     label {
@@ -36,7 +39,7 @@
         height: 10px;
         border-radius: 50%;
         content: '';
-        background-color: #5562eb;
+        background-color: #22A1CD;
         position: absolute;
         left: 50%;
         top: 50%;
