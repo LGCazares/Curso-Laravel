@@ -1,6 +1,12 @@
 <?php
+
 //home
 Route::get('/', 'alumnoController@home')->name('/');
+
+//Documento Word
+Route::get('create','DocumentController@create');
+Route::post('store','DocumentController@store');
+
 //Alumnos
 Route::post('formulario_alumno', 'alumnoController@guarda_formulario')->name('guarda_formulario');
 Route::get('nuevo_alumno', 'alumnoController@mostrarFormulario')->name('nuevo_alumno');
