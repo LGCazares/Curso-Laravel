@@ -7,6 +7,11 @@ Route::get('/', 'alumnoController@home')->name('/');
 Route::get('create','DocumentController@create');
 Route::post('store','DocumentController@store');
 
+//JavaScrip
+Route::get('JavaScrip/01','DocumentController@create');
+
+
+
 //Alumnos
 Route::post('formulario_alumno', 'alumnoController@guarda_formulario')->name('guarda_formulario');
 Route::get('nuevo_alumno', 'alumnoController@mostrarFormulario')->name('nuevo_alumno');
