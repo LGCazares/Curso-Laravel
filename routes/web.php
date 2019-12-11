@@ -8,7 +8,7 @@ Route::get('create','DocumentController@create');
 Route::post('store','DocumentController@store');
 
 //JavaScrip
-Route::get('JavaScrip/01','DocumentController@create');
+Route::get('JavaScrip/01','JavaScripController@index');
 
 
 
