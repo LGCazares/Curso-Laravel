@@ -48,9 +48,9 @@ class profeController extends Controller
           $profe->update($request->all());
           return redirect()->route('lista_profesores')->with('status','Información actualizada.');
     }
-
-    public function deleteProfe ($id){
-       Profe::destroy($id);
-       return redirect()->route('lista_profesores')->with('status','Profesor borrado');
+    public function deleteProfe($id){
+        $profesores=Profe::find($id);
+        $profesores->delete();
+        return redirect()->route('lista_profesores')->with('status','Profesor borrado');
     }
 }

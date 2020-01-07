@@ -19,6 +19,8 @@ class CreateProfesTable extends Migration
             $table->string('ap_paterno');
             $table->string('ap_materno');
             $table->string('num_empleado');
+            $table->softDeletes();
+
             $table->timestamps();
         });
     }

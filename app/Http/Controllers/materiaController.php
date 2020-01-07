@@ -19,7 +19,6 @@ class materiaController extends Controller
             'creditos' => 'required|string|size:2',
             'clave' => 'required|string|size:4',
             'profe_id' => 'required',
-
           ]);
         $nueva_materia=Materia::create($request->all());
         return redirect()->route('lista_materias')->with('status','Información guardada.');
@@ -32,13 +31,17 @@ class materiaController extends Controller
     public function detalleMateria ($id){
         $materia=Materia::where('id',$id)->first();
         return view('materias.detalle_materia', compact('materia'));
-        
     }
 
     public function editMateria ($id){
         $materia=Materia::where('id',$id)->first();
         $profes = Profe::all();
         return view('materias.edit_materia', compact('materia','profes'));
-        
+    }
+
+     public function deleteMateria($id){
+        $materia=Materia::find($id);
+        $materia->delete();
+        return redirect()->route('lista_materias')->with('status','Materia borrada');
     }
 }

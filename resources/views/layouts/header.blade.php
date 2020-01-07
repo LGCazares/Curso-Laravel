@@ -13,7 +13,7 @@
 
 <body>
     <header class="">
-        <nav  style="background-color:#22A1CD ;" class="container navbar navbar-expand-lg navbar-light ">
+        <nav style="background-color:#22A1CD ;" class="container navbar navbar-expand-lg navbar-light ">
             <a class="navbar-brand">MENU</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,10 +44,30 @@
                             <a class="btn-01 dropdown-item" href="{{route('lista_materias')}}">MATERIA</a>
                         </div>
                     </li>
+
                 </ul>
+            </div>
+            <div>
+                @auth
+                {{auth()->user()->name}} <br>
+                {{auth()->user()->email}}
+                @endauth
+                @guest
+                <a style="color: black" href="{{route('login')}}">Iniciar sesion</a>
+                @else
+                <li>
+                    <a href="#" onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">Cerrar sesion</a>
+                </li>
+                @endguest
+
             </div>
         </nav>
     </header>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
 
     <div class="container mt-5">
         @yield('content')

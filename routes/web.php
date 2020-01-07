@@ -38,6 +38,7 @@ Route::get('nueva_materia', 'materiaController@mostrarFormulario')->name('nueva_
 Route::get('lista_materias', 'materiaController@mostrarMaterias')->name('lista_materias');
 Route::get('detalle/materia/{id}', [ 'as' => 'detalle/materia', 'uses' => 'materiaController@detalleMateria']);
 Route::get('editar/materia/{id}', [ 'as' => 'editar/materia', 'uses' => 'materiaController@editMateria']);
+Route::get('elimina/materia/{id}', 'materiaController@deleteMateria')->name('elimina/materia');
 
 
 
@@ -100,5 +101,9 @@ Route::get('print_r_var_dump', 'phpController@print_r_var_dump')->name('print_r_
 
 
 
+
+
+
+Auth::routes();
 
 
