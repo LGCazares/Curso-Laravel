@@ -56,7 +56,7 @@
                 <a style="color: black" href="{{route('login')}}">Iniciar sesion</a>
                 @else
                 <li>
-                    <a href="#" onclick="event.preventDefault();
+                    <a style="color: black" href="#" onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">Cerrar sesion</a>
                 </li>
                 @endguest

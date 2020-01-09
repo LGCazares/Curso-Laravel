@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class profeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only('editProfe');
+    }
+
     public function mostrarFormulario () {
         return view('profesores.formulario_profesores');
     }
