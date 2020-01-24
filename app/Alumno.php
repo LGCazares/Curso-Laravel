@@ -12,7 +12,7 @@ class Alumno extends Model
 
     public function materia()
     {
-        return $this->hasMany('App\Materia');
+        return $this->belongsToMany(Materia::class,'alumno_materias');    //
     }
 
 }

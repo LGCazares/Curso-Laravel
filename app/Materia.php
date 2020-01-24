@@ -16,6 +16,11 @@ class Materia extends Model
         return $this->belongsTo('App\Profe');
     }
 
+    public function alumno()
+    {
+        return $this->belongsToMany(Alumno::class,'alumno_materias');  //nombre de la tabla pivot
+    }
+
 }
 
 

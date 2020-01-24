@@ -12,22 +12,22 @@
         <div class="form-group col-lg-4">
             <label for="nombre">Nombre:</label>
             <input class="form-control" type="text" placeholder="Nombre" value="{{ old('nombre') }}" name="nombre">
-            {!! $errors->first('nombre','<span class="error_form">:message <br></span>') !!}
+            {!! $errors->first('nombre','<span style="color:red" class="error_form">:message <br></span>') !!}
         </div>
         <div class="form-group col-lg-4">
             <label for="ap_paterno">Apellido paterno:</label>
             <input class="form-control" type="text" placeholder="Apellido paterno" value="{{ old('ap_paterno') }}" name="ap_paterno">
-            {!! $errors->first('ap_paterno','<span class="error_form">:message</span>') !!}
+            {!! $errors->first('ap_paterno','<span style="color:red" class="error_form">:message</span>') !!}
         </div>
         <div class="form-group col-lg-4">
             <label for="ap_materno">Apellido materno:</label>
             <input class="form-control" type="text" placeholder="Apellido materno" value="{{ old('ap_materno') }}" name="ap_materno">
-            {!! $errors->first('ap_materno','<span class="error_form">:message</span>') !!}
+            {!! $errors->first('ap_materno','<span style="color:red" class="error_form">:message</span>') !!}
         </div>
         <div class="form-group col-lg-4">
             <label for="matricula">Matricula :</label>
             <input class="form-control" type="number" placeholder="2000360101" value="{{ old('matricula') }}" name="matricula">
-            {!! $errors->first('matricula','<span class="error_form">:message</span>') !!}
+            {!! $errors->first('matricula','<span style="color:red" class="error_form">:message</span>') !!}
         </div>
 </div>
 <div class="mb-3 row justify-content-center">
@@ -36,12 +36,13 @@
         @foreach ($materias as $materia)
         <ul class="ml-5 lista">
             <li>
-                <input type="checkbox" id="materia_{{$materia->id}}">
+                <input type="checkbox" id="materia_{{$materia->id}}" value="{{ $materia->id }}" name="materia_id[]">
                 <label for="materia_{{$materia->id}}">{{$materia->materia }}</label>
             </li>
         </ul>
         @endforeach
     </div>
+    {!! $errors->first('materia_id','<span class="error_form">:message</span>') !!}
 </div>
 <div>
     <button type="submit" class="btn btn-primary btn-lg btn-block mb-5">Enviar</button>

@@ -29,7 +29,6 @@
             <select class="form-control" name="profe_id">
                 @foreach ($profes as $profe)
                          <option value="{{ $profe->id }}" {{ old("id", $materia->profe->id) == $profe->id ? "selected":"" }}>{{$profe->nombre }} {{$profe->ap_paterno }} {{$profe->ap_materno }}</option>
-                
                 @endforeach
             </select>
             {!! $errors->first('profe_id','<span class="error_form">:message</span>') !!}

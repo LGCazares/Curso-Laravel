@@ -39,6 +39,18 @@ class materiaController extends Controller
         return view('materias.edit_materia', compact('materia','profes'));
     }
 
+    public function updateMateria (Request $request){
+        $validate = $request->validate([
+            'materia' => 'required',
+            'creditos' => 'required|string|size:2',
+            'clave' => 'required|string|size:4',
+            'profe_id' => 'required',
+          ]);
+        $materia=Materia::find($request->id);
+          $materia->update($request->all());
+          return redirect()->route('lista_materias')->with('status','Información actualizada.');
+    }
+
      public function deleteMateria($id){
         $materia=Materia::find($id);
         $materia->delete();

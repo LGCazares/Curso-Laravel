@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Profe extends Model
 {
     use SoftDeletes;
-
+    
     protected $table = 'profes';
     protected $primaryKey = 'id';
     protected $fillable = ['nombre','ap_paterno','ap_materno','num_empleado'];
