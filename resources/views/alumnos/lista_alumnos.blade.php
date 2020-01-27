@@ -36,9 +36,11 @@
             <td>{{ $alumno->matricula }}</td>
             <td>
                 <ul>
+                    @foreach ($alumno->materia as $materia)
                     <li>
-                        {{ $alumno->materia }}
+                        {{ $materia->materia}}
                     </li>
+                    @endforeach
                 </ul>
             </td>
             <td><a href="{{route('detalle/alumno', $alumno->id)}}"><img class="detalle" src="images/ojo.png" alt=""></a></td>
