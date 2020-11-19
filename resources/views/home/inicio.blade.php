@@ -63,6 +63,13 @@
                     <td>vue_lista</td>
                     <td><a href="{{route('vue_lista')}}">vue_lista</a></td>
                 </tr>
+                <tr>
+                    <th colspan="2">Descarga WORD</th>
+                </tr>
+                <tr>
+                    <td>Archivo Word</td>
+                    <td><a href="{{route('descarga_word')}}">descarga_word</a></td>
+                </tr>
             </tbody>
         </table>
     </div>

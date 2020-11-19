@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'alumnoController@home')->name('/');
 
 //Documento Word
-Route::get('create','DocumentController@create');
+Route::get('descarga_word','DocumentController@create')->name('descarga_word');
 Route::post('store','DocumentController@store');
 
 //JavaScrip
