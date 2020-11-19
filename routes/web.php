@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+
 //home
 Route::get('/', 'alumnoController@home')->name('/');
 
@@ -42,6 +45,13 @@ Route::patch('editar/materia/{id}', [ 'as' => 'editar/materia', 'uses' => 'mater
 Route::get('elimina/materia/{id}', 'materiaController@deleteMateria')->name('elimina/materia');
 
 
+//DataTable
+
+Route::get('lista_usuarios', 'usuariosDataTableController@index')->name('lista_usuarios');
+Route::resource('usuarios','usuariosDataTableController');   //genera 7 rutas  (index,store,create,show,update,destroy,edit)
+
+//Vue.js
+Route::get('vue_lista', 'VueController@lista')->name('vue_lista');
 
 
 
@@ -94,10 +104,6 @@ Route::get('estructuras_control', 'phpController@estructuras_control')->name('es
 Route::get('switch', 'phpController@switch')->name('switch');
 Route::get('arreglos_indexados', 'phpController@arreglos_indexados')->name('arreglos_indexados');
 Route::get('print_r_var_dump', 'phpController@print_r_var_dump')->name('print_r_var_dump');
-
-
-
-
 
 
 
