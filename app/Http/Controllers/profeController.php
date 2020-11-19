@@ -51,7 +51,7 @@ class profeController extends Controller
           ]);
         $profe=Profe::find($request->id);
           $profe->update($request->all());
-          return redirect()->route('lista_profesores')->with('status','Información actualizada.');
+          return redirect()->route('lista_profesores')->with('status','Información actualizada QQQQQQ.');
     }
     public function deleteProfe($id){
         $profesores=Profe::find($id);
