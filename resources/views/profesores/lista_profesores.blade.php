@@ -29,7 +29,7 @@
     <tbody>
         @foreach ($profesores as $profesor)
         <tr>
-            <td>-</td>
+            <td>--</td>
             <td>{{ $profesor->nombre }}</td>
             <td>{{ $profesor->ap_paterno }}</td>
             <td>{{ $profesor->ap_materno }}</td>
