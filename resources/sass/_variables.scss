@@ -6,14 +6,66 @@ $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+
+// Font size
+$fs-9: 0.5625rem;
+$fs-9_3: 0.58125rem;
+$fs-10: 0.625rem;
+$fs-10_5: 0.65625rem;
+$fs-11: 0.6875rem;
+$fs-12: 0.75rem;
+$fs-13: 0.8125rem;
+$fs-14: 0.875rem !important;
+$fs-15: 0.9375rem;
+$fs-16: 1rem;
+$fs-17: 1.075rem;
+$fs-18: 1.125rem;
+$fs-19: 1.1875rem;
+$fs-20: 1.25rem;
+$fs-21: 1.3125rem;
+$fs-22: 1.375rem;
+$fs-24: 1.5rem;
+$fs-25: 1.5625rem;
+$fs-26: 1.625rem;
+$fs-27: 1.6875rem;
+$fs-28: 1.75rem;
+$fs-29: 1.8125rem;
+$fs-32: 2rem;
+$fs-35: 2.1875rem;
+$fs-36: 2.25rem;
+
+// Line Height
+$lh-12: 12px;
+$lh-15: 15px;
+$lh-16: 1rem;
+$lh-19: 19px;
+$lh-20: 20px;
+$lh-21: 21px;
+$lh-22: 22px;
+$lh-23: 23px;
+$lh-24: 1.5rem;
+$lh-25: 25px;
+$lh-28: 28px;
+$lh-30: 30px;
+$lh-32: 2rem;
+
+// Font weight
+$fw-extra-light: 100;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+// Letter spacing
+$ls-0: 0;
+$ls-01: 0.1px;
+$ls-02: 0.2px;
+$ls-03: 0.3px;
+$ls-04: 0.4px;
+$ls-05: 0.5px;
+$ls-06: 0.6px;
+$ls-07: 0.7px;
+$ls-08: 0.8px;
+$ls-09: 0.9px;
+$ls-1: 1px;
